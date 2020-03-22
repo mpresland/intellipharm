@@ -6,18 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Member extends Model
 {
-    public function scopeWithFirstname($query, $firstname)
+    public function scopeWithFirstnameContaining($query, $firstname)
     {
-        return $query->where('firstname', $firstname);
+        return $query->where('firstname', 'like', '%'.$firstname.'%');
     }
 
-    public function scopeWithSurname($query, $surname)
+    public function scopeWithSurnameContaining($query, $surname)
     {
-        return $query->where('surname', $surname);
+        return $query->where('surname', 'like', '%'.$surname.'%');
     }
 
-    public function scopeWithEmail($query, $email)
+    public function scopeWithEmailContaining($query, $email)
     {
-        return $query->where('email', $email);
+        return $query->where('email', 'like', '%'.$email.'%');
     }
 }
