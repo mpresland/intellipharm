@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\MembersRequest;
 use App\Http\Resources\Members;
-use App\Member;
+use App\Models\Member;
 
 class MembersController extends Controller
 {
