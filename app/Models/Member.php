@@ -6,7 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Member extends Model
 {
-    /**
-     * In a more complex application Member DB settings and relationships would be defined here.
-     */
+    public function scopeWithFirstname($query, $firstname)
+    {
+        return $query->where('firstname', $firstname);
+    }
+
+    public function scopeWithSurname($query, $surname)
+    {
+        return $query->where('surname', $surname);
+    }
+
+    public function scopeWithEmail($query, $email)
+    {
+        return $query->where('email', $email);
+    }
 }
