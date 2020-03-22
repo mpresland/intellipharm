@@ -11,22 +11,22 @@ class MembersController extends Controller
 {
     public function index(MembersRequest $request)
     {
-        $memberRequest = Member::query();
+        $memberQuery = Member::query();
 
         if ($request->has('firstname')) {
-            $memberRequest->withFirstNameContaining($request->firstname);
+            $memberQuery->withFirstNameContaining($request->firstname);
         }
 
         if ($request->has('surname')) {
-            $memberRequest->withSurnameContaining($request->surname);
+            $memberQuery->withSurnameContaining($request->surname);
         }
 
         if ($request->has('email')) {
-            $memberRequest->withEmailContaining($request->email);
+            $memberQuery->withEmailContaining($request->email);
         }
 
         $perPage = $request->has('per_page') ? $request->per_page : 20;
 
-        return new Members($memberRequest->simplePaginate($perPage));
+        return new Members($memberQuery->simplePaginate($perPage));
     }
 }
