@@ -11,6 +11,20 @@ class MembersController extends Controller
 {
     public function index(MembersRequest $request)
     {
-        return new Members(Member::paginate());
+        $memberRequest = Member::query();
+
+        if ($request->has('firstname')) {
+            $memberRequest->withFirstName($request->firstname);
+        }
+
+        if ($request->has('suranem')) {
+            $memberRequest->withSurname($request->surname);
+        }
+
+        if ($request->has('email')) {
+            $memberRequest->withEmail($request->email);
+        }
+
+        return new Members($memberRequest->simplePaginate());
     }
 }
