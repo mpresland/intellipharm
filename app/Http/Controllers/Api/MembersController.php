@@ -25,6 +25,8 @@ class MembersController extends Controller
             $memberRequest->withEmailContaining($request->email);
         }
 
-        return new Members($memberRequest->simplePaginate());
+        $perPage = $request->has('per_page') ? $request->per_page : 20;
+
+        return new Members($memberRequest->simplePaginate($perPage));
     }
 }

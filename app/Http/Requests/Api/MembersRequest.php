@@ -27,6 +27,7 @@ class MembersRequest extends FormRequest
             'firstname' => 'string',
             'surname'   => 'string',
             'email'     => 'string',
+            'per_page'  => 'integer',
         ];
     }
 }
