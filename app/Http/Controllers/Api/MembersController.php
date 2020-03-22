@@ -17,7 +17,7 @@ class MembersController extends Controller
             $memberRequest->withFirstName($request->firstname);
         }
 
-        if ($request->has('suranem')) {
+        if ($request->has('surname')) {
             $memberRequest->withSurname($request->surname);
         }
 
