@@ -26,7 +26,7 @@ class MembersRequest extends FormRequest
         return [
             'firstname' => 'string',
             'surname'   => 'string',
-            'email'     => 'email',
+            'email'     => 'string',
         ];
     }
 }
