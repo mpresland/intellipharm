@@ -14,15 +14,15 @@ class MembersController extends Controller
         $memberRequest = Member::query();
 
         if ($request->has('firstname')) {
-            $memberRequest->withFirstName($request->firstname);
+            $memberRequest->withFirstNameContaining($request->firstname);
         }
 
         if ($request->has('surname')) {
-            $memberRequest->withSurname($request->surname);
+            $memberRequest->withSurnameContaining($request->surname);
         }
 
         if ($request->has('email')) {
-            $memberRequest->withEmail($request->email);
+            $memberRequest->withEmailContaining($request->email);
         }
 
         return new Members($memberRequest->simplePaginate());
