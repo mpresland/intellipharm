@@ -4,5 +4,5 @@
 
 @section('content')
     <h1>Member Index</h1>
-    <example-component></example-component>
+    <members-index></members-index>
 @endsection
