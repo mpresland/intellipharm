@@ -2,11 +2,11 @@
   <table class="table table-striped table-bordered table-hover">
     <thead class="thead-dark">
       <tr>
-        <th scope="col">First Name</th>
-        <th scope="col">Surname</th>
-        <th scope="col">Email</th>
-        <th scope="col">Gender</th>
-        <th scope="col">Member Since</th>
+        <th scope="col" style="width: 20%">First Name</th>
+        <th scope="col" style="width: 20%">Surname</th>
+        <th scope="col" style="width: 30%">Email</th>
+        <th scope="col" style="width: 10%">Gender</th>
+        <th scope="col" style="width: 20%">Member Since</th>
       </tr>
     </thead>
     <tbody>
