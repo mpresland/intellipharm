@@ -1,6 +1,8 @@
 # Intellipharm Coding Challenge
 ## Matt Presland
 
+Installation instructions are provided below to set this project up on your local environment. The project can also be viewed at https://intellipharm.mattpresland.com.au
+
 ## Installation Instructions
 
 1. Clone repository from https://github.com/mpresland/intellipharm.git
