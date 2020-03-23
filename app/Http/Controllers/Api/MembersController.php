@@ -26,7 +26,8 @@ class MembersController extends Controller
         }
 
         $perPage = $request->has('per_page') ? $request->per_page : 10;
+        $page    = $request->has('page') ? $request->page : 1;
 
-        return new Members($memberQuery->paginate($perPage));
+        return new Members($memberQuery->paginate($perPage, ['*'], 'page', $page));
     }
 }
