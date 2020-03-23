@@ -1,7 +1,12 @@
 <template>
   <div class="root-element">
     <h3>New Memberships By Year</h3>
-    <membership-statistics-graph v-if="loaded" :chartdata="chartData" :height="100"></membership-statistics-graph>
+    <membership-statistics-graph
+      v-if="loaded"
+      :chartdata="chartData"
+      v-on:chartClicked="chartClicked"
+      :height="100"
+    ></membership-statistics-graph>
   </div>
 </template>
 
@@ -18,6 +23,14 @@ export default {
         datasets: []
       }
     };
+  },
+  methods: {
+    chartClicked(event) {
+      var selectedIndex = event[0]._index;
+
+      console.log("chart clicked");
+      console.log(this.chartData.labels[selectedIndex]);
+    }
   },
   async mounted() {
     this.loaded = false;
