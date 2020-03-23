@@ -1,5 +1,6 @@
 <template>
   <div class="root-element">
+    <h3>Current Members</h3>
     <members-filters :filters.sync="filters"></members-filters>
     <members-table :members="members"></members-table>
     <members-pagination :pagination="pagination" v-on:navigate-to="navigateTo"></members-pagination>
