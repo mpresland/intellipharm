@@ -27,6 +27,7 @@ export default {
       });
       this.chartData.datasets.push({
         label: "New Members By Year",
+        backgroundColor: "#343a40",
         data: response.data.map(function(item) {
           return item.count;
         })
