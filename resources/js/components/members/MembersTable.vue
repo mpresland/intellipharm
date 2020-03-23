@@ -1,6 +1,6 @@
 <template>
   <table class="table table-striped table-bordered table-hover">
-    <thead class="thead-light">
+    <thead class="thead-dark">
       <tr>
         <th scope="col">First Name</th>
         <th scope="col">Surname</th>
