@@ -16,5 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::namespace('Api')->group(function () {
     Route::middleware(['json'])->group(function () {
         Route::get('/members', 'MembersController@index');
+
+        Route::get('/membership-statistics', 'MemberStatisticsController@index');
     });
 });
