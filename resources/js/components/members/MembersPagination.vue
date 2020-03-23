@@ -76,6 +76,7 @@ export default {
   },
   methods: {
     navigateTo(pageLink) {
+      event.preventDefault();
       this.$emit("navigate-to", pageLink.pageNumber);
     }
   }
