@@ -21,7 +21,8 @@ export default {
       filters: {
         firstname: null,
         surname: null,
-        email: null
+        email: null,
+        page: 1
       }
     };
   },
