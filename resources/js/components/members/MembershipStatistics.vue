@@ -1,13 +1,20 @@
 <template>
   <div class="root-element">
-    <h3>{{ label }}</h3>
-    <h4 v-if="mode == 'year'">Click on a year to view detailed data</h4>
-    <button
-      type="button"
-      class="btn btn-secondary"
-      v-if="mode == 'month'"
-      v-on:click="resetChart"
-    >Back</button>
+    <div class="row">
+      <div class="col-md-6">
+        <h3>{{ label }}</h3>
+      </div>
+      <div class="col-md-6 text-right">
+        <h4 v-if="mode == 'year'">Select a year to view detailed data</h4>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          v-if="mode == 'month'"
+          v-on:click="resetChart"
+        >Back</button>
+      </div>
+    </div>
+
     <membership-statistics-graph
       v-if="loaded"
       :chartdata="chartData"
@@ -82,6 +89,7 @@ export default {
 
 <style scoped>
 .root-element {
-  min-height: 400px;
+  min-height: 350px;
+  margin-top: 20px;
 }
 </style>
