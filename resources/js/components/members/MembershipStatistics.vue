@@ -79,3 +79,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.root-element {
+  min-height: 400px;
+}
+</style>
