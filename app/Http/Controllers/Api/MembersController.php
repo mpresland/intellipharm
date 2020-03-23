@@ -11,19 +11,9 @@ class MembersController extends Controller
 {
     public function index(MembersRequest $request)
     {
-        $memberQuery = Member::query();
-
-        if ($request->has('firstname')) {
-            $memberQuery->withFirstNameContaining($request->firstname);
-        }
-
-        if ($request->has('surname')) {
-            $memberQuery->withSurnameContaining($request->surname);
-        }
-
-        if ($request->has('email')) {
-            $memberQuery->withEmailContaining($request->email);
-        }
+        $memberQuery = Member::withFirstNameContaining($request->firstname)
+            ->withSurnameContaining($request->surname)
+            ->withEmailContaining($request->email);
 
         $perPage = $request->has('per_page') ? $request->per_page : 10;
         $page    = $request->has('page') ? $request->page : 1;
