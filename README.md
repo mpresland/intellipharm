@@ -24,3 +24,9 @@ If you do not have existing data available, I have included database migrations 
 - `php artisan db:seed`
 
 Once you have configured the database, you should be able to view the example project at the url provided by your local environment.
+
+## Project Considerations
+I am for the most part a back-end developer and as this challenge was fairly straightforward from a back-end point of view, especially when using a framework such as Laravel, I have written the code in a way that is not neccessarily required for a small application like this, but that makes things easier to read and extend in larger applications. I would welcome a discussion about some of the coding decisions made.
+
+## Timing
+The git history of this demo will show it was completed in approximately 4 hours, however I did some research and prototyping outside of the flow of the git commits. In reality, the total development time would have been roughly 4.5-5 hours.
